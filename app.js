@@ -10,7 +10,7 @@ function display(num) {
         (n.value.length < 1) ? n.placeholder = 0 : (num === '%') ? n.value = eval(Number(n.value) / 100) : n.value = -n.value;
 
     else if (num === '.') {
-        if (n.value.includes('.') === false) {
+        if (n.value.slice(n.value.length - 1, n.value.length) !== '.') {
             if (n.value.length < 1)
                 n.value = '0';
             n.value += num;
